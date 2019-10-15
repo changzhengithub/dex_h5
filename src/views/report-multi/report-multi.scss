@@ -1,0 +1,194 @@
+.report-multi {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: auto;
+  .multi-classify {
+    position: relative;
+    width: 100%;
+    background-color: #fff;
+    overflow-x: hidden;
+    .classify-bg {
+      position: absolute;
+      top: 0 / $unit * $symbol;
+      right: -24 / $unit * $symbol;
+      z-index: 0;
+      width: 183 / $unit * $symbol;
+      height: 183 / $unit * $symbol;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .classify-title {
+      position: relative;
+      z-index: 9;
+      @include vertical_center();
+      width: 100%;
+      height: 78 / $unit * $symbol;
+      padding: {
+        left: 30 / $unit * $symbol;
+        right: 30 / $unit * $symbol;
+      }
+      .title-icon {
+        width: 18 / $unit * $symbol;
+        height: 18 / $unit * $symbol;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .title-text {
+        padding: {
+          left: 9 / $unit * $symbol;
+        }
+        font-family: 'PingFangSC-Bold';
+        font-weight: 700;
+        font-size: 30 / $unit * $symbol;
+        color: #222;
+      }
+    }
+    .classify-loan {
+      position: relative;
+      z-index: 9;
+      width: 100%;
+      padding: {
+        left: 30 / $unit * $symbol;
+        right: 30 / $unit * $symbol;
+      }
+      .loan-item {
+        @include vertical_center_horizontal_between();
+        width: 100%;
+        height: 60 / $unit * $symbol;
+        font-size: 27 / $unit * $symbol;
+        span:first-of-type {
+          color: #555;
+        }
+        span:last-of-type {
+          color: #333;
+        }
+      }
+    }
+    .classify-list {
+      position: relative;
+      z-index: 9;
+      width: 100%;
+      padding: {
+        top: 30 / $unit * $symbol;
+        left: 30 / $unit * $symbol;
+        right: 30 / $unit * $symbol;
+      }
+      .list-item {
+        @include vertical_center_horizontal_between();
+        width: 100%;
+        height: 69 / $unit * $symbol;
+        background-color: #fff;
+        .item-module {
+          @include center();
+          width: 180 / $unit * $symbol;
+          height: 100%;
+          font-size: 27 / $unit * $symbol;
+          color: #555;
+        }
+        &:nth-child(2n+1) {
+          background-color: #f5f5f5;
+        }
+      }
+    }
+    .classify-condition {
+      width: 100%;
+      padding: {
+        top: 30 / $unit * $symbol;
+        left: 30 / $unit * $symbol;
+        right: 30 / $unit * $symbol;
+      }
+      .condition-list {
+        width: 100%;
+        border: {
+          bottom: 1px solid #f0f0f0;
+        }
+        .list-item {
+          @include vertical_center_horizontal_between();
+          width: 100%;
+          height: 69 / $unit * $symbol;
+          padding: {
+            left: 24 / $unit * $symbol;
+          }
+          background-color: #fff;
+          .item-module {
+            height: 100%;
+            font-size: 27 / $unit * $symbol;
+            color: #555;
+          }
+          .item-module:first-of-type {
+            @include vertical_center();
+            width: 420 / $unit * $symbol;
+          }
+          .item-module:last-of-type {
+            @include center();
+            width: 150 / $unit * $symbol;
+          }
+          &:nth-child(2n+1) {
+            background-color: #f5f5f5;
+          }
+        }
+
+      }
+    }
+    .classify-summarize {
+      width: 100%;
+      padding: {
+        top: 30 / $unit * $symbol;
+        left: 45 / $unit * $symbol;
+        right: 45 / $unit * $symbol;
+        bottom: 30 / $unit * $symbol;
+      }
+      .summarize-text {
+        position: relative;
+        width: 100%;
+        line-height: 1.6;
+        padding: {
+          bottom: 12 / $unit * $symbol;
+        }
+        font-family: 'PingFangSC-Bold';
+        font-weight: 700;
+        font-size: 27 / $unit * $symbol;
+        color: #555;
+        &::after {
+          position: absolute;
+          top: 12 / $unit * $symbol;
+          left: -18 / $unit * $symbol;
+          z-index: 9;
+          display: block;
+          content: "";
+          width: 12 / $unit * $symbol;
+          height: 12 / $unit * $symbol;
+          background-color: #1f99fe;
+          border-radius: 50%;
+        }
+        .active {
+          color: #1f99fe;
+        }
+        .risk-active {
+          color: #F23F3F;
+        }
+      }
+      .summarize-tip {
+        width: 100%;
+        line-height: 1.6;
+        font-size: 26 / $unit * $symbol;
+        color: #555;
+      }
+    }
+    .classify-bottom {
+      width: 100%;
+      height: 21 / $unit * $symbol;
+      background-color: #f5f5f5;
+    }
+    &:first-of-type {
+      padding: {
+        top: 30 / $unit * $symbol;
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.toast {
+  @include center();
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
+  z-index: 9999;
+  background: transparent;
+  &-content {
+    padding: {
+      top: 12 / $unit * $symbol;
+      bottom: 12 / $unit * $symbol;
+      left: 30 / $unit * $symbol;
+      right: 30 / $unit * $symbol;
+    }
+    max-width: 600 / $unit * $symbol;
+    font-size: 30 / $unit * $symbol;
+    border-radius: 9 / $unit * $symbol;
+    background: rgba(17, 17, 17, 0.7);
+  }
+}

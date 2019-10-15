@@ -1,0 +1,134 @@
+.share {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 1000;
+  $param: (flex flex) (alignItems center);
+  @include flexSet($param);
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .8);
+  &-center {
+    position: absolute;
+    left: 0;
+    top: 60%;
+    width: 100%;
+    height: 180 / $unit * $symbol;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    .center-title {
+      @include center();
+      width: 100%;
+      height: 81 / $unit * $symbol;
+      .title-text {
+        font-size: 39 / $unit * $symbol;
+        font-weight: 700;
+        color: #fff;
+        span {
+          color: #f74e46;
+        }
+      }
+    }
+    .center-count {
+      @include center();
+      height: 99 / $unit * $symbol;
+      span {
+        font-size: 33 / $unit * $symbol;
+        color: #fff;
+      }
+      .count-down {
+        @include vertical_center_horizontal_around();
+        width: 270 / $unit * $symbol;
+        height: 58 / $unit * $symbol;
+        padding: {
+          left: 18 / $unit * $symbol;
+          right: 18 / $unit * $symbol;
+        }
+        // background-color: rgba(0, 0, 0, .3);
+        span {
+          font-weight: 700;
+          font-size: 27 / $unit * $symbol;
+          color: #fff;
+        }
+        .down-item {
+          @include center();
+          width: 57 / $unit * $symbol;
+          height: 54 / $unit * $symbol;
+          background-color: #fff;
+          border-radius: 6 / $unit * $symbol;
+          span {
+            font-size: 27 / $unit * $symbol;
+            color: #222;
+          }
+        }
+      }
+    }
+  }
+  &-content {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 330 / $unit * $symbol;
+    background-color: #fff;
+    .content-title {
+      position: relative;
+      @include center();
+      width: 100%;
+      height: 90 / $unit * $symbol;
+      border: {
+        bottom: 1px solid #ededed;
+      }
+      .title-close {
+        position: absolute;
+        right: 0 / $unit * $symbol;
+        top: 0 / $unit * $symbol;
+        z-index: 9;
+        @include center();
+        width: 99 / $unit * $symbol;
+        height: 100%;
+        i {
+          font-size: 48 / $unit * $symbol;
+          color: #adadad;
+        }
+      }
+      span {
+        font-size: 33 / $unit * $symbol;
+        color: #000000;
+      }
+    }
+    .content-list {
+      @include vertical_center();
+      width: 100%;
+      height: 227 / $unit * $symbol;
+      .list-item {
+        @include column_center();
+        width: 222 / $unit * $symbol;
+        height: 100%;
+        .item-icon {
+          @include center();
+          width: 100%;
+          i {
+            font-size: 75 / $unit * $symbol;
+          }
+          .iconweixin-copy {
+            color: #22ac38;
+          }
+          .iconpengyouquan {
+            color: #7dca0f;
+          }
+
+        }
+        .item-text {
+          @include center();
+          width: 100%;
+          height: 60 / $unit * $symbol;
+          font-size: 30 / $unit * $symbol;
+          color: #000000;
+        }
+      }
+    }
+  }
+}

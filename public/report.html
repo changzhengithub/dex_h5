@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <title>报告示例</title>
+    <script src="<%= BASE_URL %>static/iconfont/iconfont.js"></script>
+    <script src="<%= BASE_URL %>static/script/app.api.js"></script>
+    <script>
+      (function () {
+        var queryNoStr = 'qno';
+        var queryTypeStr = 'type';
+        var queryLevelStr = 'level';
+        var url = window.location.href
+        if (url.indexOf('?') == -1 || url.indexOf(queryNoStr) == -1 || url.indexOf(queryTypeStr) == -1 || url.indexOf(queryLevelStr) == -1) return
+        var arr1=url.split("?");
+        var arr2=arr1[1].split("&");
+        var obj={};
+        for(var i=0;i<arr2.length;i++){
+          var arr3=arr2[i].split("=");
+          obj[arr3[0]]=arr3[1];
+        }
+        window.queryNo = obj[queryNoStr];
+        window.queryType = obj[queryTypeStr];
+        window.queryLevel = obj[queryLevelStr];
+      })();
+    </script>
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but dxe_h5 doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+  </body>
+</html>

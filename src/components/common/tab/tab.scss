@@ -1,0 +1,25 @@
+.tab {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  $param: (flex flex) (alignItems center);
+  @include flexSet($param);
+  width: 100vw;
+  height: 99 / $unit * $symbol;
+
+  &-item {
+    position: relative;
+    @include center();
+    width: 50%;
+    height: 100%;
+    font-size: 33 / $unit * $symbol;
+    color: #333;
+    background-color: #fff;
+  }
+  .active {
+    color: #f64841;
+    background-color: #fce81f;
+  }
+}

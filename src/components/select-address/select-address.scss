@@ -1,0 +1,128 @@
+.select-address {
+  @include column_vertical_end();
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, .5);
+  .address-content {
+    width: 100%;
+    padding: {
+      bottom: 48 / $unit * $symbol;
+    }
+    background-color: #fff;
+    .content-title {
+      position: relative;
+      @include center();
+      width: 100%;
+      height: 99 / $unit * $symbol;
+      border: {
+        bottom: 1px solid #ececec;
+      }
+      .title-close {
+        position: absolute;
+        top: 24 / $unit * $symbol;
+        right: 0 / $unit * $symbol;
+        z-index: 9;
+        @include center();
+        width: 90 / $unit * $symbol;
+        height: 60 / $unit * $symbol;
+        background-color: #fff;
+        i {
+          font-size: 48 / $unit * $symbol;
+          color: #a3a3a3;
+        }
+      }
+    }
+    .content-list {
+      width: 100%;
+      max-height: 513 / $unit * $symbol;
+      overflow-y: auto;
+      .list-item {
+        @include flex(flex);
+        width: 100%;
+        padding: {
+          left: 24 / $unit * $symbol;
+          right: 24 / $unit * $symbol;
+        }
+        border: {
+          bottom: 1px solid #ececec;
+        }
+        .item-detail {
+          flex: 1;
+          // min-height: 171 / $unit * $symbol;
+          padding: {
+            top: 12 / $unit * $symbol;
+            bottom: 18 / $unit * $symbol;
+            right: 12 / $unit * $symbol;
+          }
+          .detial-info {
+            @include vertical_center();
+            width: 100%;
+            height: 54 / $unit * $symbol;
+            font-size: 30 / $unit * $symbol;
+            color: #333;
+            span:first-of-type {
+              margin: {
+                right: 30 / $unit * $symbol;
+              }
+            }
+          }
+          .detial-address {
+            width: 100%;
+            line-height: 1.7;
+            font-size: 30 / $unit * $symbol;
+            color: #333;
+          }
+        }
+        .item-select {
+          height: 100%;
+          padding: {
+            top: 21 / $unit * $symbol;
+          }
+          i {
+            font-size: 39 / $unit * $symbol;
+            color: #a3a3a3;
+          }
+          .active {
+            color: #f74e46;
+          }
+        }
+      }
+    }
+    .content-tip {
+      @include vertical_center();
+      width: 100%;
+      height: 99 / $unit * $symbol;
+      padding: {
+        left: 27 / $unit * $symbol;
+        right: 27 / $unit * $symbol;
+      }
+      span {
+        font-size: 30 / $unit * $symbol;
+        font-weight: 700;
+        color: #333;
+      }
+    }
+    .content-btn {
+      width: 100%;
+      height: 169 / $unit * $symbol;
+      padding: {
+        top: 60 / $unit * $symbol;
+        left: 27 / $unit * $symbol;
+        right: 27 / $unit * $symbol;
+      }
+      .btn {
+        width: 100%;
+        height: 100%;
+        border-radius: 12 / $unit * $symbol;
+        background-color: #f74e46;
+        font-size: 33 / $unit * $symbol;
+        font-weight: 700;
+        color: #fff;
+      }
+    } 
+  }
+}

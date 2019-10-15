@@ -1,0 +1,94 @@
+.report-relation {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  padding: {
+    bottom: 36 / $unit * $symbol;
+  }
+  background-color: #fff;
+  overflow-y: auto;
+  .relation-classify {
+    width: 100%;
+    .classify-title {
+      @include vertical_center_horizontal_between();
+      width: 100%;
+      height: 63 / $unit * $symbol;
+      padding: {
+        left: 24 / $unit * $symbol;
+        right: 24 / $unit * $symbol;
+      }
+      background-color: #F1F2F3;
+      .title-date {
+        font-size: 24 / $unit * $symbol;
+        color: #999;
+      }
+      .title-qualified {
+        font-size: 24 / $unit * $symbol;
+        color: #666;
+      }
+    }
+    .classify-list {
+      width: 100%;
+      .list-item {
+        width: 100%;
+        height: 120 / $unit * $symbol;
+        padding: {
+          top: 15 / $unit * $symbol;
+          left: 33 / $unit * $symbol;
+          right: 33 / $unit * $symbol;
+        }
+        border: {
+          bottom: 1px solid #eee;
+        }
+        .item-top {
+          @include vertical_center_horizontal_between();
+          width: 100%;
+          height: 48 / $unit * $symbol;
+          .top-name {
+            font-size: 30 / $unit * $symbol;
+            color: #000;
+          }
+          .top-qualified {
+            @include vertical_center();
+            .qualified-icon {
+              width: 24 / $unit * $symbol;
+              height: 24 / $unit * $symbol;
+              img {
+                width: 100%;
+                height: 100%;
+              }
+            }
+            .qualified-text {
+              padding: {
+                left: 9 / $unit * $symbol;
+              }
+              font-size: 27 / $unit * $symbol;
+              color: #FF6600;
+            }
+            .active {
+              color: #4d93ff;
+            }
+          }
+        }
+        .item-bottom {
+          @include vertical_center_horizontal_between();
+          width: 100%;
+          height: 48 / $unit * $symbol;
+          .bottom-phone {
+            font-size: 27 / $unit * $symbol;
+            color: #666;
+          }
+          .bottom-tip {
+            font-size: 27 / $unit * $symbol;
+            color: #666;
+          }
+        }
+      }
+    }
+    &:first-of-type {
+      background: #fff url('../../assets/image/example.png') no-repeat;
+      background-position: right (-30 / $unit * $symbol) top (100 / $unit * $symbol);
+      background-size: (183 / $unit * $symbol) (183 / $unit * $symbol);
+    }
+  }
+}

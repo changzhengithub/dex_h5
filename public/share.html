@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <title>助力免费拿</title>
+    <script src="<%= BASE_URL %>static/script/app.api.js"></script>
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but wx-share doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <script>
+      /*
+      * 微信登录版
+        // 获取链接参数
+        (function () {
+          var queryTaskNo = 'tno'
+          var queryPhoneNo = 'phoneNo'
+          var queryCustomerId = 'customerId'
+          var url = window.location.href
+          if (url.indexOf('?') == -1 || url.indexOf(queryTaskNo) == -1 || url.indexOf(queryPhoneNo) == -1 || url.indexOf(queryCustomerId) == -1) return
+          var arr1=url.split("?");
+          var arr2=arr1[1].split("&");
+          var obj={};
+          for(var i=0;i<arr2.length;i++){
+            var arr3=arr2[i].split("=");
+            obj[arr3[0]]=arr3[1];
+          }
+          window.TaskNo = obj[queryTaskNo]
+          window.PhoneNo = obj[queryPhoneNo]
+          window.CustomerId = obj[queryCustomerId]
+        })();
+      */
+      // 手机号注册版
+      (function () {
+        var queryTaskNo = 'tno'
+        var url = window.location.href
+        if (url.indexOf('?') == -1 || url.indexOf(queryTaskNo) == -1) return
+        var arr1=url.split("?");
+        var arr2=arr1[1].split("&");
+        var obj={};
+        for(var i=0;i<arr2.length;i++){
+          var arr3=arr2[i].split("=");
+          obj[arr3[0]]=arr3[1];
+        }
+        window.TaskNo = obj[queryTaskNo]
+      })();
+      (function () {
+        var queryOldUser = 'old'
+        var url = window.location.href
+        if (url.indexOf('?') == -1 || url.indexOf(queryOldUser) == -1) return
+        var arr1=url.split("?");
+        var arr2=arr1[1].split("&");
+        var obj={};
+        for(var i=0;i<arr2.length;i++){
+          var arr3=arr2[i].split("=");
+          obj[arr3[0]]=arr3[1];
+        }
+        window.OldUser = obj[queryOldUser]
+      })();
+    </script>
+    <!-- built files will be auto injected -->
+  </body>
+</html>

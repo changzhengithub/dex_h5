@@ -1,0 +1,74 @@
+.exchange {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 1000;
+  $param: (flex flex) (alignItems center);
+  @include flexSet($param);
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+  &-content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 600 / $unit * $symbol;
+    height: 312 / $unit * $symbol;
+    padding: {
+      top: 15 / $unit * $symbol;
+    }
+    background-color: #fff;
+    border-radius: 15 / $unit * $symbol;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    .content-title {
+      @include center();
+      width: 100%;
+      height: 138 / $unit * $symbol;
+      span {
+        font-weight: 700;
+        font-size: 39 / $unit * $symbol;
+        color: #333;
+      }
+    }
+    .content-btn {
+      @include vertical_center_horizontal_between();
+      width: 100%;
+      // height: 87 / $unit * $symbol;
+      padding: {
+        top: 15 / $unit * $symbol;
+        left: 36 / $unit * $symbol;
+        right: 36 / $unit * $symbol;
+      }
+      .btn-cancel {
+        // width: 249 / $unit * $symbol;
+        // height: 87 / $unit * $symbol;
+        .cancel {
+          width: 249 / $unit * $symbol;
+          height: 87 / $unit * $symbol;
+          font-size: 36 / $unit * $symbol;
+          color: #8436FA;
+          border-radius: 42 / $unit * $symbol;
+          border: 1px solid #8436FA;
+          background-color: #fff;
+        }
+      }
+      .btn-sure {
+        // width: 249 / $unit * $symbol;
+        // height: 87 / $unit * $symbol;
+        .sure {
+          width: 249 / $unit * $symbol;
+          height: 87 / $unit * $symbol;
+          font-size: 36 / $unit * $symbol;
+          color: #fff;
+          border-radius: 42 / $unit * $symbol;
+          border: 1px solid #8436FA;
+          background-color: #8436FA;
+        }
+      }
+
+    }
+  }
+}

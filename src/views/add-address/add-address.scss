@@ -1,0 +1,82 @@
+.add-address{
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  padding: {
+    top: 126 / $unit * $symbol;
+  }
+  background-color: #f0f2f5;
+  .address-input {
+    width: 100%;
+    height: 495 / $unit * $symbol;
+    padding: {
+      bottom: 102 / $unit * $symbol;
+      left: 30 / $unit * $symbol;
+    }
+    background-color: #fff;
+    .input-item {
+      $param: (flex flex) (alignItems center) (justifyContent space-between);
+      @include flexSet($param);
+      width: 100%;
+      height: 99 / $unit * $symbol;
+      padding: {
+        right: 30 / $unit * $symbol;
+      }
+      border: {
+        bottom: 1px solid #f4f4f4;
+      }
+      p {
+        @include vertical_center();
+        width: 156 / $unit * $symbol;
+        height: 100%;
+        border: {
+          bottom: 1px solid transparent;
+        }
+        font-size: 30 / $unit * $symbol;
+        color: #666;
+      }
+      .item-input {
+        @include vertical_center_horizontal_between();
+        flex: 1;
+        height: 100%;
+        font-size: 30 / $unit * $symbol;
+        color: #ccc;
+        input {
+          width: 100%;
+          height: 100%;
+          font-size: 30 / $unit * $symbol;
+          color: #666;
+          &::-webkit-input-placeholder {
+            font-size: 30 / $unit * $symbol;
+            color: #ccc;
+          }
+        }
+        .active {
+          color: #666;
+        }
+      }
+      &:last-of-type {
+        border: none;
+      }
+    }
+  }
+  .button-default {
+    $param: (flex flex) (justifyContent center);
+    @include flexSet($param);
+    width: 100%;
+    height: 141 / $unit * $symbol;
+    padding: {
+      top: 42 / $unit * $symbol;
+      right: 30 / $unit * $symbol;
+      left: 30 / $unit * $symbol;
+    }
+    button {
+      width: 100%;
+      height: 100%;
+      border-radius: 9 / $unit * $symbol;
+      font-size: 39 / $unit * $symbol;
+      background-color: #eb2828;
+      color: #ffffff;
+    }
+  }
+}

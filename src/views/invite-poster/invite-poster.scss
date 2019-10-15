@@ -1,0 +1,98 @@
+.invite-poster {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ff605e;
+  overflow: auto;
+  .poster-header {
+    position: absolute;
+    top: 45 / $unit * $symbol;
+    left: 0;
+    z-index: 99;
+    @include vertical_center();
+    width: 210 / $unit * $symbol;
+    height: 60 / $unit * $symbol;
+    padding: {
+      left: 33 / $unit * $symbol;
+    }
+    color: #fff;
+    i {
+      font-size: 30 / $unit * $symbol;
+    }
+    span {
+      // padding: {
+      //   left: 6 / $unit * $symbol;
+      // }
+      font-size: 36 / $unit * $symbol;
+    }
+  }
+  .poster-share {
+    position: absolute;
+    right: 0;
+    top: 60 / $unit * $symbol;
+    z-index: 99;
+    width: 120 / $unit * $symbol;
+    height: 48 / $unit * $symbol;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .poster-main {
+    width: 100%;
+    height: 100%;
+    .main-bg {
+      position: absolute;
+      left: 0;
+      right: 0;
+      z-index: 0;
+      width: 100%;
+      height: 1158 / $unit * $symbol;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .mian-content {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      padding: {
+        top: 270 / $unit * $symbol;
+      }
+      .content-banner {
+        position: relative;
+        width: 100%;
+        height: 762 / $unit * $symbol;
+      }
+      .content-save {
+        width: 100%;
+        height: 156 / $unit * $symbol;
+        padding: {
+          top: 60 / $unit * $symbol;
+          left: 153 / $unit * $symbol;
+          right: 153 / $unit * $symbol;
+        }
+        .save-btn {
+          width: 100%;
+          height: 100%;
+          border-radius: 48 / $unit * $symbol;
+          background-color: #ffd85d;
+          font-weight: 700;
+          font-size: 39 / $unit * $symbol;
+          color: #ff0e2c;
+        }
+      }
+      .content-tip {
+        @include center();
+        width: 100%;
+        height: 90 / $unit * $symbol;
+        span {
+          font-size: 27 / $unit * $symbol;
+          color: #fff;
+        }
+      }
+    }
+  }
+}

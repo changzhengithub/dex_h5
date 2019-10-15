@@ -1,0 +1,113 @@
+.coupon {
+  width: 100%;
+  &-item {
+    position: relative;
+    @include vertical_center();
+    width: 100%;
+    height: 189 / $unit * $symbol;
+    margin: {
+      bottom: 21 / $unit * $symbol;
+    }
+    .item-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 0;
+      width: 100%;
+      height: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .item-money {
+      position: relative;
+      z-index: 1;
+      @include center();
+      width: 189 / $unit * $symbol;
+      height: 100%;
+      padding: {
+        top: 24 / $unit * $symbol;
+        right: 12 / $unit * $symbol;
+      }
+      font-family: 'DIN-Condensed-Bold';
+      font-weight: 700;
+      color: #000;
+      span:first-of-type {
+        font-size: 33 / $unit * $symbol;
+      }
+      span:last-of-type {
+        font-size: 81 / $unit * $symbol;
+      }
+    }
+    .item-detail {
+      position: relative;
+      z-index: 1;
+      width: 501 / $unit * $symbol;
+      height: 100%;
+      padding: {
+        top: 18 / $unit * $symbol;
+        left: 30 / $unit * $symbol;
+        right: 30 / $unit * $symbol;
+      }
+      .detail-title {
+        width: 100%;
+        height: 81 / $unit * $symbol;
+        .title-text {
+          font-size: 27 / $unit * $symbol;
+          color: #333;
+        }
+      }
+      .detail-gold {
+        @include vertical_center();
+        width: 100%;
+        height: 48 / $unit * $symbol;
+        .gold-img {
+          width: 30 / $unit * $symbol;
+          height: 30 / $unit * $symbol;
+          margin: {
+            right: 6 / $unit * $symbol;
+          }
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        span {
+          font-size: 27 / $unit * $symbol;
+          color: #FFC227;
+        }
+      }
+      .detail-tip {
+        @include vertical_center();
+        width: 100%;
+        height: 36 / $unit * $symbol;
+        span {
+          font-size: 21 / $unit * $symbol;
+          color: #999;
+        }
+      }
+      .detail-btn {
+        position: absolute;
+        right: 15 / $unit * $symbol;
+        bottom: 18 / $unit * $symbol;
+        z-index: 9;
+        width: 129 / $unit * $symbol;
+        height: 48 / $unit * $symbol;
+        .btn {
+          width: 100%;
+          height: 100%;
+          font-size: 24 / $unit * $symbol;
+          color: #fff;
+          border-radius: 24 / $unit * $symbol;
+          background-color: #8436FA;
+        }
+        .active {
+          color: #fff;
+          background-color: #BFBFBF;
+        }
+      }
+    }
+  }
+}

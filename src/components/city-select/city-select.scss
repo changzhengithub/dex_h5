@@ -1,0 +1,70 @@
+.city-select {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($color: #000000, $alpha: .5);
+  .select-content {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 588 / $unit * $symbol;
+    background-color: #ffffff;
+    border: {
+      bottom: 1px solid #cccccc;
+    }
+    .content-title {
+      $param: (flex flex) (alignItems center) (justifyContent space-between);
+      @include flexSet($param);
+      width: 100%;
+      height: 90 / $unit * $symbol;
+      padding: {
+        left: 30 / $unit * $symbol;
+        right: 30 / $unit * $symbol;
+      }
+      font-size: 33 / $unit * $symbol;
+      color: #333333;
+    }
+    .content-nav {
+      $param: (flex flex) (justifyContent space-between);
+      @include flexSet($param);
+      width: 100%;
+      height: (588 - 90) / $unit * $symbol;
+      padding: {
+        right: 9 / $unit * $symbol;
+      }
+      .nav-area {
+        width: (750 / 3) / $unit * $symbol;
+        height: 100%;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        .area-list {
+          width: 100%;
+          height: auto;
+          .list-item {
+            width: 100%;
+            height: 60 / $unit * $symbol;
+            padding: {
+              top: 12 / $unit * $symbol;
+            }
+            text-align: center;
+            font-size: 30 / $unit * $symbol;
+            color: #aaaaaa;
+            white-space : nowrap;
+            overflow-x: auto;
+          }
+          .active {
+            font-weight: 600;
+            color: #000000;
+          }
+        }
+      }
+    }
+  }
+}

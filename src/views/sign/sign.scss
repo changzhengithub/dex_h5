@@ -1,0 +1,358 @@
+.sign {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  &-main {
+    width: 100%;
+    height: 100%;
+    padding: {
+      bottom: 60 / $unit * $symbol;
+    }
+    background-color: #f5f5f5;
+    overflow-y: auto;
+    .mian-content {
+      position: relative;
+      width: 100%;
+      padding: {
+        top: 420 / $unit * $symbol;
+      }
+      background: #f5f5f5 url('../../assets/image/sign-bg02.jpg') no-repeat 0 0;
+      background-size: contain;
+      .content-integral {
+        position: absolute;
+        top: 300 / $unit * $symbol;
+        right: 0;
+        z-index: 9;
+        width: 100%;
+        height: 90 / $unit * $symbol;
+        .integral-num {
+          @include center();
+          height: 72 / $unit * $symbol;
+          font-weight: 700;
+          font-size: 75 / $unit * $symbol;
+          color: #E15F10;
+        }
+        .integral-title {
+          @include center();
+          height: 30 / $unit * $symbol;
+          font-weight: 700;
+          font-size: 24 / $unit * $symbol;
+          color: #D89200;
+        }
+      }
+      .content-panel {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        padding: {
+          left: 21 / $unit * $symbol;
+          right: 21 / $unit * $symbol;
+        }
+        .panel-sign {
+          position: relative;
+          width: 100%;
+          height: 540 / $unit * $symbol;
+          margin: {
+            bottom: 6 / $unit * $symbol;
+          }
+          padding: {
+            top: 12 / $unit * $symbol;
+          }
+          border-radius: 15 / $unit * $symbol;
+          background: #fff url('../../assets/image/sign-badge.png') 0 0 no-repeat;
+          background-size: (252 / $unit * $symbol) (177 / $unit * $symbol);
+          .sign-title {
+            width: 100%;
+            .title-text {
+              @include center();
+              width: 100%;
+              height: 72 / $unit * $symbol;
+              font-size: 33 / $unit * $symbol;
+              color: #000; 
+              span {
+                color: #F7462D;
+              }
+            }
+            .title-days {
+              @include center();
+              width: 252 / $unit * $symbol;
+              height: 42 / $unit * $symbol;
+              margin: 0 auto;
+              font-size: 24 / $unit * $symbol;
+              border-radius: 21 / $unit * $symbol;
+              background-color: #F8F8F8;
+              span:first-of-type {
+                color: #8F786E;
+              }
+              span:last-of-type {
+                color: #F7462D;
+              }
+            }
+          }
+          .sign-withdraw {
+            position: absolute;
+            top: 30 / $unit * $symbol;
+            right: 18 / $unit * $symbol;
+            z-index: 9;
+            @include center();
+            width: 150 / $unit * $symbol;
+            height: 42 / $unit * $symbol;
+            font-size: 27 / $unit * $symbol;
+            color: #2C8DFF;
+          }
+          .sign-virtual {
+            $param: (flex flex) (alignItems flex-end) (justifyContent space-between);
+            @include flexSet($param);
+            width: 100%;
+            height: 207 / $unit * $symbol;
+            padding: {
+              left: 12 / $unit * $symbol;
+              right: 12 / $unit * $symbol;
+            }
+            margin: {
+              bottom: 30 / $unit * $symbol;
+            }
+            .virtual-item {
+              width: 87 / $unit * $symbol;
+              .item-days {
+                @include center();
+                width: 100%;
+                height: 42 / $unit * $symbol;
+                background-color: #f8e5c2;
+                border-top-left-radius: 6 / $unit * $symbol;
+                border-top-right-radius: 6 / $unit * $symbol;
+                span {
+                  font-size: 24 / $unit * $symbol;
+                  color: #F0944E;
+                }
+              }
+              .item-card {
+                width: 100%;
+                height: 99 / $unit * $symbol;
+                border: 1px solid #f8e5c2;
+                border-bottom-left-radius: 6 / $unit * $symbol;
+                border-bottom-right-radius: 6 / $unit * $symbol;
+                .card-icon {
+                  height: 66 / $unit * $symbol;
+                  padding: {
+                    top: 9 / $unit * $symbol;
+                    left: 18 / $unit * $symbol;
+                    right: 18 / $unit * $symbol;
+                  }
+                  img {
+                    width: 100%;
+                    height: 100%;
+                  }
+                }
+                .card-text {
+                  @include center();
+                  width: 100%;
+                  height: 33 / $unit * $symbol;
+                  border-bottom-left-radius: 6 / $unit * $symbol;
+                  border-bottom-right-radius: 6 / $unit * $symbol;
+                  span {
+                    font-size: 18 / $unit * $symbol;
+                    color: #FF9B4F;
+                  }
+                }
+              }
+            }
+          }
+          .sign-list {
+            $param: (flex flex) (alignItems flex-end) (justifyContent space-between);
+            @include flexSet($param);
+            width: 100%;
+            height: 207 / $unit * $symbol;
+            padding: {
+              left: 12 / $unit * $symbol;
+              right: 12 / $unit * $symbol;
+            }
+            margin: {
+              bottom: 30 / $unit * $symbol;
+            }
+            .list-item {
+              width: 87 / $unit * $symbol;
+              .item-days {
+                @include center();
+                width: 100%;
+                height: 42 / $unit * $symbol;
+                background-color: #f8e5c2;
+                border-top-left-radius: 6 / $unit * $symbol;
+                border-top-right-radius: 6 / $unit * $symbol;
+                span {
+                  font-size: 24 / $unit * $symbol;
+                  color: #F0944E;
+                }
+              }
+              .item-card {
+                width: 100%;
+                height: 99 / $unit * $symbol;
+                border: 1px solid #f8e5c2;
+                border-bottom-left-radius: 6 / $unit * $symbol;
+                border-bottom-right-radius: 6 / $unit * $symbol;
+                .card-icon {
+                  height: 66 / $unit * $symbol;
+                  padding: {
+                    top: 9 / $unit * $symbol;
+                    left: 18 / $unit * $symbol;
+                    right: 18 / $unit * $symbol;
+                  }
+                  img {
+                    width: 100%;
+                    height: 100%;
+                  }
+                }
+                .card-text {
+                  @include center();
+                  width: 100%;
+                  height: 33 / $unit * $symbol;
+                  border-bottom-left-radius: 6 / $unit * $symbol;
+                  border-bottom-right-radius: 6 / $unit * $symbol;
+                  span {
+                    font-size: 18 / $unit * $symbol;
+                    color: #FF9B4F;
+                  }
+                }
+              }
+            }
+            .current-active {
+              width: 123 / $unit * $symbol;
+              .item-days {
+                @include center();
+                background-color: #f15c4c;
+                span:first-of-type {
+                  font-family: 'PingFangSC-Bold';
+                  font-size: 33 / $unit * $symbol;
+                  color: #fff;
+                }
+                span:last-of-type {
+                  font-size: 24 / $unit * $symbol;
+                  color: #fff;
+                }
+              }
+              .item-card {
+                height: 141 / $unit * $symbol;
+                border: 1px solid #f15c4c;
+                .card-icon {
+                  height: 102 / $unit * $symbol;
+                  padding: {
+                    top: 15 / $unit * $symbol;
+                    left: 24 / $unit * $symbol;
+                    right: 24 / $unit * $symbol;
+                  }
+                }
+                .card-text {
+                  img {
+                    width: 21 / $unit * $symbol;
+                    height: 21 / $unit * $symbol;
+                  }
+                  span {
+                    padding: {
+                      left: 6 / $unit * $symbol;
+                    }
+                    font-size: 21 / $unit * $symbol;
+                    color: #EE331F;
+                  }
+                }
+              }
+            }
+            .active {
+              .item-days {
+                background-color: #fff4df;
+                span {
+                  color: #8f786e;
+                }
+              }
+              .item-card {
+                border: 1px solid #fff4df;
+                .card-text {
+                  span {
+                    color: #8f786e;
+                  }
+                }
+              }
+            }
+          }
+          .sign-btn {
+            width: 100%;
+            height: 90 / $unit * $symbol;
+            margin: {
+              bottom: 21 / $unit * $symbol;
+            }
+            padding: {
+              left: 75 / $unit * $symbol;
+              right: 75 / $unit * $symbol;
+            }
+            .btn {
+              width: 100%;
+              height: 100%;
+              border-radius: 45 / $unit * $symbol;
+              background-color: #8436FA;
+              font-size: 30 / $unit * $symbol;
+              color: #fff;
+            }
+          }
+          .sign-tip {
+            position: relative;
+            @include center();
+            width: 471 / $unit * $symbol;
+            height: 45 / $unit * $symbol;
+            margin: 0 auto;
+            font-size: 27 / $unit * $symbol;
+            color: #df8f4b;
+            background-color: #fdf4d6;
+            &::after {
+              position: absolute;
+              top: -27 / $unit * $symbol;
+              left: 50%;
+              z-index: 9;
+              display: block;
+              content: "";
+              border-style: solid;
+              border-width: 15 / $unit * $symbol;
+              border-color: transparent transparent #fdf4d6 transparent;
+              transform: translateX(-50%);
+              -webkit-transform: translateX(-50%);              
+            }
+          }
+        }
+      }
+      .content-title {
+        position: relative;
+        z-index: 1;
+        @include vertical_center();
+        width: 100%;
+        height: 102 / $unit * $symbol;
+        padding: {
+          left: 60 / $unit * $symbol;
+          right: 60 / $unit * $symbol;
+        }
+        span {
+          font-size: 33 / $unit * $symbol;
+          color: #000;
+        }
+        &::after {
+          position: absolute;
+          top: 36 / $unit * $symbol;
+          left: 30 / $unit * $symbol;
+          z-index: 9;
+          content: '';
+          display: block;
+          width: 9 / $unit * $symbol;
+          height: 30 / $unit * $symbol;
+          background-color: #FF783C;
+          border-radius: 3 / $unit * $symbol;
+        }
+      }
+      .content-product {
+        $param: (flex flex) (flexWrap wrap) (justifyContent space-between);
+        @include flexSet($param);
+        width: 100%;
+        padding: {
+          left: 21 / $unit * $symbol;
+          right: 21 / $unit * $symbol;
+        }
+      }
+    }
+  }
+}

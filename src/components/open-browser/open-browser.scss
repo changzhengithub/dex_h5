@@ -1,0 +1,96 @@
+.open-browser {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 1000;
+  $param: (flex flex) (alignItems center);
+  @include flexSet($param);
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .8);
+  .browser-img {
+    position: absolute;
+    left: 50%;
+    top: 20 / $unit * $symbol;
+    width: 454 / $unit * $symbol;
+    height: 252 / $unit * $symbol;
+    border-radius: 12 / $unit * $symbol;
+    -webkit-transform: translateX(-35%);
+    transform: translateX(-35%);
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .browser-new {
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 501 / $unit * $symbol;
+    width: 100%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    .new-logo {
+      width: 120 / $unit * $symbol;
+      height: 120 / $unit * $symbol;
+      margin: 0 auto;
+      margin: {
+        bottom: 24 / $unit * $symbol;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .new-tip {
+      @include center();
+      width: 100%;
+      height: 60 / $unit * $symbol;
+      font-size: 36 / $unit * $symbol;
+      color: #ffff;
+    }
+  }
+  .browser-mine {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: {
+      top: 261 / $unit * $symbol;
+    }
+    .mine-img {
+      position: absolute;
+      right: 54 / $unit * $symbol;
+      top: 42 / $unit * $symbol;
+      z-index: 9;
+      width: 135 / $unit * $symbol;
+      height: 153 / $unit * $symbol;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .mine-tip {
+      width: 510 / $unit * $symbol;
+      height: 222 / $unit * $symbol;
+      margin: 0 auto;
+      padding: {
+        top: 51 / $unit * $symbol;
+      }
+      background-color: #fff;
+      border-radius: 15 / $unit * $symbol;
+      .tip-line {
+        @include center();
+        width: 100%;
+        height: 60 / $unit * $symbol;
+        font-weight: 700;
+        font-size: 30 / $unit * $symbol;
+        color: #222222;
+        span {
+          color: #ff3131;
+        }
+      }
+    }
+  }
+}

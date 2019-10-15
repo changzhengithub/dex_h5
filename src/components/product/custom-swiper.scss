@@ -1,0 +1,13 @@
+.pagination-bullets {
+  width: 12 / $unit * $symbol;
+  height: 12 / $unit * $symbol;
+  margin-right: 9 / $unit * $symbol;
+  margin-left: 9 / $unit * $symbol;
+  border-radius: 6 / $unit * $symbol;
+  background-color: #999999;
+}
+.pagination-bullet-active {
+  width: 24 / $unit * $symbol;
+  height: 12 / $unit * $symbol;
+  background-color: #3b9bff;
+}

@@ -1,0 +1,160 @@
+.index {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  padding: {
+    bottom: 99 / $unit * $symbol;
+  }
+  background-color: #f64841;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  &-rule {
+    position: absolute;
+    top: 18 / $unit * $symbol;
+    right: 0;
+    z-index: 9;
+    @include center();
+    width: 120 / $unit * $symbol;
+    height: 48 / $unit * $symbol;
+    border-top-left-radius: 24 / $unit * $symbol;
+    border-bottom-left-radius: 24 / $unit * $symbol;
+    background-color: #ea2d1e;
+    span {
+      font-size: 24 / $unit * $symbol;
+      color: #ffffff;
+    }
+  }
+  &-main {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    .mian-content {
+      position: relative;
+      width: 100%;
+      margin: {
+        top: -552 / $unit * $symbol;
+      }
+      padding: {
+        top: 630 / $unit * $symbol;
+      }
+      .content-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 0;
+        width: 100%;
+        height: 1200 / $unit * $symbol;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .content-panel {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        padding: {
+          left: 24 / $unit * $symbol;
+          right: 24 / $unit * $symbol;
+        }
+        .panel-item {
+          @include vertical_center();
+          width: 100%;
+          height: 222 / $unit * $symbol;
+          margin: {
+            bottom: 12 / $unit * $symbol;
+          }
+          padding: {
+            left: 15 / $unit * $symbol;
+            right: 15 / $unit * $symbol;
+          }
+          background-color: #fff;
+          border-radius: 15 / $unit * $symbol;
+          .item-img {
+            width: 168 / $unit * $symbol;
+            height: 168 / $unit * $symbol;
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+          .item-detail {
+            flex: 1;
+            height: 100%;
+            padding: {
+              top: 21 / $unit * $symbol;
+              left: 33 / $unit * $symbol;
+            }
+            .detail-title {
+              margin: {
+                bottom: 6 / $unit * $symbol;
+              }
+              width: 100%;
+              height: 78 / $unit * $symbol;
+              .title-text {
+                font-size: 27 / $unit * $symbol;
+                color: #333;
+              }
+            }
+            .detail-assistance {
+              @include vertical_center_horizontal_between();
+              width: 100%;
+              height: 48 / $unit * $symbol;
+              .assistance-wait {
+                font-size: 24 / $unit * $symbol;
+                color: #666666;
+                span {
+                  color: #f74e46;
+                }
+              }
+              .assistance-yet {
+                // text-decoration: line-through;
+                font-size: 21 / $unit * $symbol;
+                color: #999999;
+              }
+            }
+            .detail-btm {
+              @include vertical_center_horizontal_between();
+              .btm-price {
+                @include vertical_center();
+
+                .price-current {
+                  color: #ff2f46;
+                  span:first-of-type {
+                    font-size: 21 / $unit * $symbol;
+                  }
+                  span:last-of-type {
+                    font-size: 30 / $unit * $symbol;
+                    font-weight: 700;
+                  }
+                }
+                .detail-original {
+                  margin-left: 15 / $unit * $symbol;
+                  text-decoration: line-through;
+                  font-size: 24 / $unit * $symbol;
+                  color: #999999;
+                }
+              }
+              .btm-button {
+                width: 141 / $unit * $symbol;
+                height: 51 / $unit * $symbol;
+                .btn {
+                  width: 100%;
+                  height: 100%;
+                  border-radius: 24 / $unit * $symbol;
+                  background-color: #f74e46;
+                  font-size: 27 / $unit * $symbol;
+                  color: #fff;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

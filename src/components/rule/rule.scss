@@ -1,0 +1,98 @@
+.rule {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 1000;
+  $param: (flex flex) (alignItems center);
+  @include flexSet($param);
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+  .rule-content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 621 / $unit * $symbol;
+    // height: 801 / $unit * $symbol;
+    padding: {
+      bottom: 30 / $unit * $symbol;
+    }
+    background-color: #fff;
+    border-radius: 12 / $unit * $symbol;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    .content-title {
+      @include center();
+      width: 100%;
+      height: 108 / $unit * $symbol;
+      border: {
+        bottom: 1px solid #eee;
+      }
+      span {
+        font-size: 39 / $unit * $symbol;
+        color: #333;
+      }
+    }
+    .content-list {
+      width: 100%;
+      height: 600 / $unit * $symbol;
+      padding: {
+        left: 36 / $unit * $symbol;
+        right: 36 / $unit * $symbol;
+        top: 30 / $unit * $symbol;
+        bottom: 30 / $unit * $symbol;
+      }
+      overflow-y: auto;
+      .list-item {
+        @include flex(flex);
+        width: 100%;
+        .item-icon {
+          @include center();
+          width: 27 / $unit * $symbol;
+          height: 27 / $unit * $symbol;
+          margin: {
+            top: 9 / $unit * $symbol;
+          }
+          border-radius: 50%;
+          background-color: #fdcac7;
+          // opacity: 0.3;
+          span {
+            font-size: 21 / $unit * $symbol;
+            color: #333;
+          }
+        }
+        .item-text {
+          flex: 1;
+          padding: {
+            left: 12 / $unit * $symbol;
+          }
+          .text {
+            width: 100%;
+            line-height: 1.7;
+            font-size: 27 / $unit * $symbol;
+            color: #333;
+          }
+        }
+      }
+    }
+    .content-know {
+      width: 100%;
+      height: 114 / $unit * $symbol;
+      padding: {
+        top: 21 / $unit * $symbol;
+        left: 66 / $unit * $symbol;
+        right: 66 / $unit * $symbol;
+      }
+      .know-btn {
+        width: 100%;
+        height: 100%;
+        font-size: 39 / $unit * $symbol;
+        color: #fff;
+        background-color: #f74e46;
+	      border-radius: 12 / $unit * $symbol;
+      }
+    }
+  }
+}

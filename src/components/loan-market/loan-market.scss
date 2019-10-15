@@ -1,0 +1,58 @@
+.loan-market {
+  width: 348 / $unit * $symbol;
+  height: 168 / $unit * $symbol;
+  padding: {
+    top: 24 / $unit * $symbol;
+    left: 27 / $unit * $symbol;
+  }
+  margin: {
+    bottom: 12 / $unit * $symbol;
+  }
+  background-color: #fff;
+  border-radius: 9 / $unit * $symbol;
+  .market-detail {
+    @include vertical_center();
+    width: 100%;
+    height: 72 / $unit * $symbol;
+    .detail-logo {
+      width: 60 / $unit * $symbol;
+      height: 60 / $unit * $symbol;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .detail-title {
+      padding: {
+        left: 15 / $unit * $symbol;
+      }
+      .title-text {
+        @include vertical_center();
+        height: 36 / $unit * $symbol;
+        span {
+          font-family: 'PingFangSC-Bold';
+          font-weight: 700;
+          font-size: 27 / $unit * $symbol;
+          color: #222;
+        }
+      }
+      .title-amount {
+        @include vertical_center();
+        height: 30 / $unit * $symbol;
+        span {
+          font-size: 24 / $unit * $symbol;
+          color: #FF6600;
+        }
+      }
+    }
+  }
+  .market-tip {
+    @include vertical_center();
+    width: 100%;
+    height: 60 / $unit * $symbol;
+    span {
+      font-size: 24 / $unit * $symbol;
+      color: #73737A;
+    }
+  }
+}

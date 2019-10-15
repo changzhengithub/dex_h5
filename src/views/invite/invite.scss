@@ -1,0 +1,308 @@
+.invite {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  padding: {
+    // top: 126 / $unit * $symbol;
+    bottom: 123 / $unit * $symbol;
+  }
+  background-color: #ff635d;
+  // background: linear-gradient(to bottom, #ff645d, #fe9450);
+  &-btn {
+    position: absolute;
+    top: 156 / $unit * $symbol;
+    right: 0;
+    z-index: 9;
+    @include center();
+    width: 108 / $unit * $symbol;
+    height: 42 / $unit * $symbol;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &-main {
+    width: 100%;
+    height: 100%;
+    padding: {
+      bottom: 30 / $unit * $symbol;
+    }
+    overflow-y: auto;
+    .mian-content {
+      position: relative;
+      width: 100%;
+      padding: {
+        top: 942 / $unit * $symbol;
+      }
+      .content-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 0;
+        width: 100%;
+        height: 1170 / $unit * $symbol;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .content-composing {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        padding: {
+          left: 39 / $unit * $symbol;
+          right: 39 / $unit * $symbol;
+        }
+        .composing-transmit {
+          width: 438 / $unit * $symbol;
+          height: 96 / $unit * $symbol;
+          margin: 0 auto;
+          margin: {
+            bottom: 141 / $unit * $symbol;
+          }
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .composing-activity {
+          width: 100%;
+          margin: {
+            bottom: 33 / $unit * $symbol;
+          }
+          .activity-title {
+            position: relative;
+            @include center();
+            width: 381 / $unit * $symbol;
+            height: 63 / $unit * $symbol;
+            margin: 0 auto;
+            img {
+              position: absolute;
+              top: 0;
+              left: 0;
+              right: 0;
+              z-index: 0;
+              width: 100%;
+              height: 100%;
+            }
+            span {
+              position: relative;
+              z-index: 1;
+              font-size: 33 / $unit * $symbol;
+              color: #fff;
+            }
+          }
+          .activity-rule {
+            width: 100%;
+            height: 522 / $unit * $symbol;
+            margin: {
+              top: -42 / $unit * $symbol;
+            }
+            padding: {
+              top: 51 / $unit * $symbol;
+            }
+            background-color: #fff;
+            border-radius: 15 / $unit * $symbol;
+            .rule-graphical {
+              @include vertical_center_horizontal_between();
+              width: 100%;
+              padding: {
+                left: 81 / $unit * $symbol;
+                right: 81 / $unit * $symbol;
+              }
+              .graphical-start {
+                width: 141 / $unit * $symbol;
+                height: 144 / $unit * $symbol;
+                img {
+                  width: 100%;
+                  height: 100%;
+                }
+              }
+              .graphical-send {
+                width: 102 / $unit * $symbol;
+                height: 66 / $unit * $symbol;
+                img {
+                  width: 100%;
+                  height: 100%;
+                }
+              }
+              .graphical-end {
+                width: 141 / $unit * $symbol;
+                height: 144 / $unit * $symbol;
+                img {
+                  width: 100%;
+                  height: 100%;
+                }
+              }
+            }
+            .rule-text {
+              width: 100%;
+              .text {
+                @include vertical_center();
+                width: 100%;
+                height: 42 / $unit * $symbol;
+                padding: {
+                  left: 33 / $unit * $symbol;
+                  right: 33 / $unit * $symbol;
+                }
+                font-size: 24 / $unit * $symbol;
+                color: #212121;
+              }
+              .red-color {
+                color: #e93343;
+                font-weight: 700;
+              }
+              .gray-color {
+                color: #999999;
+              }
+              .orange-color {
+                color: #ff6600;
+              }
+            }
+          }
+        }
+        .composing-rank {
+          width: 100%;
+          .rank-title {
+            position: relative;
+            z-index: 9;
+            @include center();
+            width: 381 / $unit * $symbol;
+            height: 63 / $unit * $symbol;
+            margin: 0 auto;
+            img {
+              position: absolute;
+              top: 0;
+              left: 0;
+              right: 0;
+              z-index: 0;
+              width: 100%;
+              height: 100%;
+            }
+            span {
+              position: relative;
+              z-index: 1;
+              font-size: 33 / $unit * $symbol;
+              color: #fff;
+            }
+          }
+          .rank-content {
+            position: relative;
+            width: 100%;
+            height: 580 / $unit * $symbol;
+            margin: {
+              top: -42 / $unit * $symbol;
+            }
+            padding: {
+              top: 51 / $unit * $symbol;
+              bottom: 45 / $unit * $symbol;
+            }
+            background-color: #fff;
+            border-radius: 15 / $unit * $symbol;
+            overflow: hidden;
+            .content-list {
+              width: 100%;
+              height: 100%;
+              overflow: auto;
+              .list-title {
+                @include vertical_center_horizontal_between();
+                width: 100%;
+                .title-item {
+                  @include center();
+                  width: 198 / $unit * $symbol;
+                  height: 51 / $unit * $symbol;
+                  font-size: 24 / $unit * $symbol;
+                  color: #999999;
+                }
+              }
+              .list-item {
+                @include vertical_center_horizontal_between();
+                width: 100%;
+                height: 69 / $unit * $symbol;
+                .item {
+                  @include center();
+                  width: 198 / $unit * $symbol;
+                  height: 100%;
+                }
+                .item-ranking {
+                  span {
+                    font-size: 21 / $unit * $symbol;
+                    color: #de8846;
+                  }
+                  img {
+                    width: 33 / $unit * $symbol;
+                    height: 33 / $unit * $symbol;
+                  }
+                }
+                .item-phone {
+                  font-size: 24 / $unit * $symbol;
+                  color: #de8846;
+                }
+                .item-money {
+                  // font-weight: 700;
+                  font-size: 30 / $unit * $symbol;
+                  color: #f2524a;
+                }
+              }
+            }
+            .content-mine {
+              position: absolute;
+              left: 0;
+              bottom: 33 / $unit * $symbol;
+              z-index: 9;
+              @include vertical_center_horizontal_between();
+              width: 100%;
+              height: 90 / $unit * $symbol;
+              background-color: #fff;
+              box-shadow: 0 0 5px #fff4e4;
+              .mine-ranking {
+                @include center();
+                width: 198 / $unit * $symbol;
+                height: 100%;
+                span {
+                  font-size: 21 / $unit * $symbol;
+                  color: #de8846;
+                }
+                img {
+                  width: 33 / $unit * $symbol;
+                  height: 33 / $unit * $symbol;
+                }
+              }
+              .mine-phone {
+                @include center();
+                width: 198 / $unit * $symbol;
+                height: 100%;
+                font-size: 24 / $unit * $symbol;
+                color: #de8846;
+              }
+              .mine-money {
+                @include center();
+                width: 198 / $unit * $symbol;
+                height: 100%;
+                // font-weight: 700;
+                font-size: 30 / $unit * $symbol;
+                color: #f2524a;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &-share {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    width: 100%;
+    height: 132 / $unit * $symbol;
+    // background-color: #fe9450;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

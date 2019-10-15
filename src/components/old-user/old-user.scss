@@ -1,0 +1,178 @@
+.old-user {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 1000;
+  $param: (flex flex) (alignItems center);
+  @include flexSet($param);
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .8);
+  .user-content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 633 / $unit * $symbol;
+    height: 726 / $unit * $symbol;
+    padding: {
+      top: 90 / $unit * $symbol;
+      bottom: 40 / $unit * $symbol;
+    }
+    background: url('../../assets/image/old-user-bg.png') no-repeat 0 0;
+    background-size: 100% 100%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    .content-title {
+      @include center();
+      width: 100%;
+      height: 66 / $unit * $symbol;
+      span {
+        font-size: 45 / $unit * $symbol;
+        color: #fff;
+      }
+    }
+    .content-tip {
+      @include center();
+      width: 100%;
+      height: 60 / $unit * $symbol;
+      margin: {
+        bottom: 30 / $unit * $symbol;
+      }
+      span {
+        font-size: 39 / $unit * $symbol;
+        color: #fff;
+      }
+    }
+    .content-product {
+      width: 100%;
+      
+      padding: {
+        left: 30 / $unit * $symbol;
+        right: 48 / $unit * $symbol;
+        // top: 40 / $unit * $symbol;
+        // bottom: 40 / $unit * $symbol;
+      }
+      .product-item {
+        @include vertical_center();
+        width: 100%;
+        height: 141 / $unit * $symbol;
+        margin: {
+          bottom: 21 / $unit * $symbol;
+        }
+        padding: {
+          left: 15 / $unit * $symbol;
+        }
+        border-radius: 6 / $unit * $symbol;
+        background-color: #fff;
+        .item-img {
+          width: 114 / $unit * $symbol;
+          height: 114 / $unit * $symbol;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .item-detail {
+          flex: 1;
+          height: 100%;
+          padding: {
+            top: 12 / $unit * $symbol;
+            bottom: 12 / $unit * $symbol;
+            left: 30 / $unit * $symbol;
+            right: 12 / $unit * $symbol;
+          }
+          .detail-title {
+            @include vertical_center();
+            width: 100%;
+            height: 72 / $unit * $symbol;
+            // margin: {
+            //   bottom: 12 / $unit * $symbol;
+            // }
+            p {
+              width: 100%;
+              line-height: 1.4;
+              font-size: 27 / $unit * $symbol;
+              color: #222;
+            }
+          }
+          .detail-info {
+            width: 100%;
+            height: 42 / $unit * $symbol;
+            .info-price {
+              font-size: 30 / $unit * $symbol;
+              color: #F94D55;
+            }
+            .info-market {
+              margin: {
+                left: 12 / $unit * $symbol;
+              }
+              font-size: 24 / $unit * $symbol;
+              color: #999;
+            }
+            .info-num {
+              margin: {
+                left: 66 / $unit * $symbol;
+              }
+              font-size: 27 / $unit * $symbol;
+              color: #666;
+            }
+          }
+        }
+        .item-icon {
+          border-radius: 50%;
+          background-color: #fdcac7;
+          // opacity: 0.3;
+          span {
+            font-size: 21 / $unit * $symbol;
+            color: #333;
+          }
+        }
+        .item-text {
+          flex: 1;
+          padding: {
+            left: 12 / $unit * $symbol;
+          }
+          .text {
+            width: 100%;
+            line-height: 1.7;
+            font-size: 27 / $unit * $symbol;
+            color: #333;
+          }
+        }
+      }
+    }
+    .content-take {
+      width: 100%;
+      height: 102 / $unit * $symbol;
+      padding: {
+        left: 90 / $unit * $symbol;
+        right: 99 / $unit * $symbol;
+        top: 21 / $unit * $symbol;
+      }
+      .take-btn {
+        width: 100%;
+        height: 100%;
+        font-size: 33 / $unit * $symbol;
+        color: #F94D55;
+        background-color: #FFE17D;
+        border-radius: 39 / $unit * $symbol;
+      }
+    }
+    .content-close {
+      position: absolute;
+      left: 50%;
+      bottom: -120 / $unit * $symbol;
+      z-index: 9;
+      width: 69 / $unit * $symbol;
+      height: 69 / $unit * $symbol;
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}

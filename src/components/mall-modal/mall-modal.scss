@@ -1,0 +1,269 @@
+.mall-modal {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  .modal-explain {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    @include vertical_direction();
+    width: 100%;
+    height: 810 / $unit * $symbol;
+    background-color: #fff;
+    .explain-title {
+      position: relative;
+      @include vertical_center();
+      width: 100%;
+      height: 90 / $unit * $symbol;
+      padding: {
+        left: 24 / $unit * $symbol;
+        right: 24 / $unit * $symbol;
+      }
+      border: {
+        bottom: 1px solid #eee;
+      }
+      span {
+        font-size: 30 / $unit * $symbol;
+        color: #999;
+      }
+      .title-close {
+        position: absolute;
+        top: 0 / $unit * $symbol;
+        right: 0 / $unit * $symbol;
+        z-index: 99;
+        @include center();
+        width: 90 / $unit * $symbol;
+        height: 90 / $unit * $symbol;
+        i {
+          font-size: 42 / $unit * $symbol;
+          color: #999;
+        }
+      }
+    }
+    .explain-content {
+      flex: 1;
+      width: 100%;
+      // height: 100%;
+      padding: {
+        left: 30 / $unit * $symbol;
+        right: 30 / $unit * $symbol;
+        top: 21 / $unit * $symbol;
+        // bottom: 12 / $unit * $symbol;
+      }
+      overflow: auto;
+    }
+  }
+  .modal-parameter {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    @include vertical_direction();
+    width: 100%;
+    padding: {
+      bottom: 90 / $unit * $symbol;
+    }
+    background-color: #fff;
+    .parameter-commodity {
+      position: relative;
+      width: 100%;
+      height: 168 / $unit * $symbol;
+      border: {
+        bottom: 1px solid #eee;
+      }
+      .commodity-img {
+        position: absolute;
+        left: 30 / $unit * $symbol;
+        top: -54 / $unit * $symbol;
+        z-index: 9;
+        width: 195 / $unit * $symbol;
+        height: 195 / $unit * $symbol;
+        border: 1px solid #eee;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .commodity-close {
+        position: absolute;
+        top: 0 / $unit * $symbol;
+        right: 0 / $unit * $symbol;
+        z-index: 99;
+        @include center();
+        width: 90 / $unit * $symbol;
+        height: 90 / $unit * $symbol;
+        i {
+          font-size: 42 / $unit * $symbol;
+          color: #999;
+        }
+      }
+      .commodity-detail {
+        @include vertical_direction_between();
+        width: 100%;
+        height: 100%;
+        padding: {
+          top: 24 / $unit * $symbol;
+          bottom: 30 / $unit * $symbol;
+          left: 255 / $unit * $symbol;
+        }
+        .detail-price {
+          font-family: 'PingFangSC-Bold';
+          font-size: 30 / $unit * $symbol;
+          font-weight: 700;
+          color: #eb2828;
+        }
+        .detail-selected {
+          font-size: 24 / $unit * $symbol;
+          color: #999999;
+        }
+      }
+    }
+    .parameter-content {
+      width: 100%;
+      height: 600 / $unit * $symbol;
+      padding: {
+        bottom: 30 / $unit * $symbol;
+      }
+      overflow: auto;
+      .content-classify {
+        width: 100%;
+        padding: {
+          left: 30 / $unit * $symbol;
+          right: 30 / $unit * $symbol;
+          bottom: 30 / $unit * $symbol;
+        }
+        border: {
+          bottom: 1px solid #efefef;
+        }
+        .classify-params {
+          width: 100%;
+          .params-title {
+            @include vertical_center();
+            width: 100%;
+            height: 78 / $unit * $symbol;
+            span {
+              font-size: 30 / $unit * $symbol;
+              color: #666666;
+            }
+          }
+          .params-list {
+            $param: (flex flex) (flexWrap wrap);
+            @include flexSet($param);
+            width: 100%;
+            .list-item {
+              @include center();
+              // width: 180 / $unit * $symbol;
+              height: 60 / $unit * $symbol;
+              padding: {
+                left: 30 / $unit * $symbol;
+                right: 30 / $unit * $symbol;
+              }
+              margin: {
+                right: 21 / $unit * $symbol;
+                bottom: 18 / $unit * $symbol;
+              }
+              border-radius: 9 / $unit * $symbol;
+              background-color: #f0f2f5;
+              span {
+                font-size: 27 / $unit * $symbol;
+                color: #333333;
+              }
+            }
+            .active {
+              background-color: #3b9bff;
+              span {
+                color: #fff;
+              }
+            }
+            .forbid-active {
+              background-color: #f0f2f5;
+              span {
+                color: #d1d1d1;
+              }
+            }
+          }
+        }
+      }
+      .content-num {
+        @include vertical_center_horizontal_between();
+        width: 100%;
+        height: 78 / $unit * $symbol;
+        padding: {
+          top: 24 / $unit * $symbol;
+          left: 33 / $unit * $symbol;
+          right: 33 / $unit * $symbol;
+        }
+        .num-title {
+          @include vertical_center();
+          height: 100%;
+          span {
+            font-size: 30 / $unit * $symbol;
+            color: #666666;
+          }
+        }
+        .num-switch {
+          @include vertical_center();
+          height: 48 / $unit * $symbol;
+          border: 1px solid #dcdcdc;
+          border-radius: 6 / $unit * $symbol;
+          .switch-cut, .switch-add {
+            @include center();
+            width: 54 / $unit * $symbol;
+            height: 100%;
+            text-align: center;
+          }
+          .switch-cut {
+            font-size: 36 / $unit * $symbol;
+            font-weight: 700;
+            color: #adadad;
+            background-color: #f9f9f9;
+            border-top-left-radius: 6 / $unit * $symbol;
+            border-bottom-left-radius: 6 / $unit * $symbol;
+          }
+          .switch-text {
+            @include vertical_center();
+            height: 100%;
+            padding: {
+              left: 12 / $unit * $symbol;
+              right: 12 / $unit * $symbol;
+            }
+            font-size: 27 / $unit * $symbol;
+            color: #333333;
+          }
+          .switch-add {
+            font-size: 36 / $unit * $symbol;
+            color: #333333;
+            background-color: #f5f5f5;
+            border-top-right-radius: 6 / $unit * $symbol;
+            border-bottom-right-radius: 6 / $unit * $symbol;
+          }
+        }
+      }
+    }
+    .parameter-buy {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 999;
+      width: 100%;
+      height: 90 / $unit * $symbol;
+      background-color: #fff;
+      .buy-btn {
+        @include center();
+        width: 100%;
+        height: 100%;
+        .btn {
+          width: 100%;
+          height: 100%;
+          font-size: 33 / $unit * $symbol;
+          color: #fff;
+          background-color: #3b9bff;
+        }
+      }
+    }
+  }
+}

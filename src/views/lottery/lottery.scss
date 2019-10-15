@@ -1,0 +1,180 @@
+.lottery {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ed3b3a;
+  overflow: auto;
+
+  &-header {
+    position: relative;
+    width: 100%;
+    height: 381 / $unit * $symbol;
+    margin: {
+      bottom: 15 / $unit * $symbol;
+    }
+    .header-img {
+      width: 100%;
+      height: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .header-swiper {
+      position: absolute;
+      top: 330 / $unit * $symbol;
+      left: 50%;
+      z-index: 9;
+      @include center();
+      width: 444 / $unit * $symbol;
+      height: 60 / $unit * $symbol;
+      // font-size: 27 / $unit * $symbol;
+      // color: #FFC4C4;
+      border-radius: 30 / $unit * $symbol;
+      background-color: rgba(220,49,53,1);
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+      .swiper-slide {
+        width: 100%;
+        height: 100%;
+        .slide-item {
+          width: 100%;
+          height: 100%;
+          .item-text {
+            @include center();
+            width: 100%;
+            height: 100%;
+            padding: {
+              left: 12 / $unit * $symbol;
+              right: 12 / $unit * $symbol;
+            }
+            font-size: 21 / $unit * $symbol;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+  &-main {
+    width: 100%;
+    padding: {
+      bottom: 30 / $unit * $symbol;
+    }
+    .mian-disk {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      .disk-bg {
+        width: 100%;
+        height: 720 / $unit * $symbol;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .disk-panel {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        z-index: 9;
+        width: 660 / $unit * $symbol;
+        height: 660 / $unit * $symbol;
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
+        .panel-rotate {
+          width: 100%;
+          height: 100%;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+      .disk-pointer {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        z-index: 18;
+        width: 180 / $unit * $symbol;
+        height: 312 / $unit * $symbol;
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    .main-tip {
+      @include center();
+      width: 100%;
+      height: 84 / $unit * $symbol;
+      padding: {
+        top: 6 / $unit * $symbol;
+      }
+      font-size: 27 / $unit * $symbol;
+      color: #fff;
+    }
+    .main-shade {
+      width: 100%;
+      height: 21 / $unit * $symbol;
+      background-color: #dc3135;
+    }
+    .main-gold {
+      width: 100%;
+      padding: {
+        left: 30 / $unit * $symbol;
+        right: 30 / $unit * $symbol;
+      }
+      .gold-title {
+        @include vertical_center();
+        width: 100%;
+        height: 78 / $unit * $symbol;
+        font-family:'PingFangSC-Bold';
+        font-size: 30 / $unit * $symbol;
+        color: #fff;
+      }
+      .gold-list {
+        width: 100%;
+        .list-item {
+          @include vertical_center_horizontal_between();
+          width: 100%;
+          height: 141 / $unit * $symbol;
+          margin: {
+            bottom: 9 / $unit * $symbol;
+          }
+          padding: {
+            left: 27 / $unit * $symbol;
+            right: 21 / $unit * $symbol;
+          }
+          background-color: #fff;
+          border-radius: 12 / $unit * $symbol;
+        }
+        .item-detail {
+          flex: 1;
+          color: #F87E15;
+          .detail-text {
+            @include vertical_center();
+            height: 48 / $unit * $symbol;
+            font-size: 27 / $unit * $symbol;
+          }
+          .detail-tip {
+            @include vertical_center();
+            height: 42 / $unit * $symbol;
+            font-size: 21 / $unit * $symbol;
+          }
+        }
+        .item-submit {
+          @include center();
+          width: 156 / $unit * $symbol;
+          height: 60 / $unit * $symbol;
+          font-size: 27 / $unit * $symbol;
+          color: #fff;
+          background-color: #F87E15;
+          box-shadow: (3 / $unit * $symbol) (6 / $unit * $symbol) 0px 0px rgba(134,22,0,0.15);
+          border-radius: 27 / $unit * $symbol;
+        }
+      }
+    }
+  }
+}

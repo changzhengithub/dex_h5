@@ -1,0 +1,119 @@
+.mall-shop {
+  position: relative;
+  width: 369 / $unit * $symbol;
+  height: 552 / $unit * $symbol;
+  margin: {
+    bottom: 12 / $unit * $symbol;
+  }
+  padding: {
+    left: 27 / $unit * $symbol;
+    right: 27 / $unit * $symbol;
+    top: 21 / $unit * $symbol;
+    // bottom: 24 / $unit * $symbol;
+  }
+  background-color: #fff;
+  .item-pic {
+    width: 100%;
+    height: 300 / $unit * $symbol;
+    margin: {
+      bottom: 6 / $unit * $symbol;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .item-title {
+    @include vertical_center();
+    width: 100%;
+    height: 108 / $unit * $symbol;
+    .title-text {
+      line-height: 1.2;
+      font-family: 'PingFangSC-Bold';
+      font-size: 24 / $unit * $symbol;
+      color: #222222;
+    }
+  }
+  .item-sale {
+    @include vertical_center_horizontal_between();
+    width: 100%;
+    height: 60 / $unit * $symbol;
+    .sale-return {
+      @include vertical_center();
+      width: 135 / $unit * $symbol;
+      height: 36 / $unit * $symbol;
+      margin: {
+        top: 6 / $unit * $symbol;
+        left: 18 / $unit * $symbol;
+      }
+      border-radius: 18 / $unit * $symbol;
+      background-color: #ffefef;
+      .return-title {
+        position: relative;
+        @include center();
+        width: 42 / $unit * $symbol;
+        height: 100%;
+        font-size: 21 / $unit * $symbol;
+        color: #fff;
+        background-color: #ff2f46;
+        border-top-left-radius: 18 / $unit * $symbol;
+        border-bottom-left-radius: 18 / $unit * $symbol;
+        border-bottom-right-radius: 9 / $unit * $symbol;
+        &::after {
+          position: absolute;
+          top: 0;
+          right: -12 / $unit * $symbol;
+          z-index: 9;
+          content: '';
+          display: block;
+          border-width: 15 / $unit * $symbol;
+          border-style: solid;
+          border-color: #ff2f46 transparent transparent transparent;
+        }
+      }
+      .return-num {
+        @include center();
+        width: 93 / $unit * $symbol;
+        height: 100%;
+        font-size: 21 / $unit * $symbol;
+        color: #ff2f46;
+        background-color: #ffefef;
+        border-top-right-radius: 18 / $unit * $symbol;
+        border-bottom-right-radius: 18 / $unit * $symbol;
+      }
+    }
+    .sale-num {
+      font-size: 21 / $unit * $symbol;
+      color: #999999;
+    }
+  }
+  .item-price {
+    @include vertical_center();
+    width: 100%;
+    height: 42 / $unit * $symbol;
+    // padding: {
+    //   left: 18 / $unit * $symbol;
+    //   right: 18 / $unit * $symbol;
+    // }
+    .price-current {
+      font-family:'PingFangSC-Regular';
+      color: #FE0038;
+      font-weight: 700;
+      span:first-of-type {
+        font-size: 21 / $unit * $symbol;
+      }
+      span:last-of-type {
+        font-size: 30 / $unit * $symbol;
+      }
+    }
+    .detail-original {
+      margin-left: 12 / $unit * $symbol;
+      padding: {
+        top: 6 / $unit * $symbol;
+      }
+      text-decoration: line-through;
+      font-size: 18 / $unit * $symbol;
+      color: #777777;
+    }
+  }
+}
